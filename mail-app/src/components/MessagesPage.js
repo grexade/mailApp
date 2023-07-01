@@ -30,7 +30,7 @@ export default function MessagePage() {
   return (
     <div className="body-flex">
       <div className="message-flex">
-        <div className="header">Messages</div>
+        <div className="header">{router.query.subject}</div>
         <div></div>
 
         <div
