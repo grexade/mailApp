@@ -38,6 +38,10 @@ export default function MessagePage() {
           {data?.map((item) => (
             <div
               onClick={() =>
+                //TODO make a post to server saying it is read
+                //get the id clicked on and send it to the server
+                //then change the isRead to true
+
                 router.push({
                   pathname: "/inbox/1",
                   query: { subject: item.subject },
