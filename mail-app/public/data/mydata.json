@@ -1,0 +1,57 @@
+[
+  {
+    "subject": "Important Announcement",
+    "content": "Please read this message carefully.",
+    "isRead": true
+  },
+  {
+    "subject": "Happy Birthday!",
+    "content": "Wishing you a fantastic day filled with joy and laughter!",
+    "isRead": false
+  },
+  {
+    "subject": "Meeting Reminder",
+    "content": "How r u ?",
+    "isRead": true
+  },
+  {
+    "subject": "Weekend Plans",
+    "content": "Let's catch up this weekend and plan some fun activities together.",
+    "isRead": false
+  },
+  {
+    "subject": "Weekend Plans",
+    "content": "Let's catch up this weekend and plan some fun activities together.",
+    "isRead": false
+  },
+  {
+    "subject": "Job Opportunity",
+    "content": "I came across a great job opening that might be perfect for you. Check it out!",
+    "isRead": true
+  },
+  {
+    "subject": "Congratulations on Your Achievement",
+    "content": "You did an amazing job! Congratulations on your well-deserved success.",
+    "isRead": false
+  },
+  {
+    "subject": "Vacation Photos",
+    "content": "Just wanted to share some pictures from my recent vacation. Check them out!",
+    "isRead": true
+  },
+  {
+    "subject": "Request for Assistance",
+    "content": "I need your help with a project. Can we discuss it soon?",
+    "isRead": false
+  },
+  {
+    "subject": "Happy Anniversary!",
+    "content": "Wishing you both a wonderful anniversary filled with love and happiness.",
+    "isRead": true
+  },
+  {
+    "subject": "Reminder: Pay Your Bills",
+    "content": "Don't forget to pay your bills by the end of the week.",
+    "isRead": false
+  }
+]

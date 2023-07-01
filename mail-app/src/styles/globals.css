@@ -1,0 +1,73 @@
+.body-flex {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+}
+.header {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.underline {
+  color: black;
+  background-color: black;
+}
+
+.subheader {
+  color: black;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.subheaderread {
+  color: black;
+  font-size: 16px;
+}
+
+.message-flex {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 2rem;
+  width: 40%;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.importMsg {
+  background-color: powderblue;
+  border: 1px solid black;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.mybutton {
+  background-color: blue;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+.body-form {
+  width: 40%;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: powderblue;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+body {
+  background: whitesmoke;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
