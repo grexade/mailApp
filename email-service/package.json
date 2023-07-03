@@ -1,0 +1,24 @@
+{
+  "name": "email-service",
+  "version": "1.0.0",
+  "description": "simple emailing service",
+  "main": "www.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node www.js",
+    "swagger-autogen": "node swagger.js"
+  },
+  "author": "olusegun",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.1",
+    "multer": "^1.4.5-lts.1",
+    "swagger-autogen": "^2.23.4",
+    "swagger-ui-express": "^4.6.3"
+  }
+}

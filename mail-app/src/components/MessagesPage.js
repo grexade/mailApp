@@ -12,9 +12,9 @@ export default function MessagePage() {
   const [data, setData] = useState();
   console.log("this is the data", data);
   function mydata() {
-    axios.get("/data/mydata.json").then((response) => {
+    axios.get("http://localhost:3001/api/v1/messages").then((response) => {
       const check = response.data.filter(
-        (item) => item.subject === query.subject
+        (item) => item._id === query.subject
       );
 
       setData(check);
@@ -29,24 +29,31 @@ export default function MessagePage() {
 
   return (
     <div className="body-flex">
-      <div className="message-flex">
-        <div className="header">{router.query.subject}</div>
-        <div></div>
 
-        <div
-          style={{ textDecoration: "none" }}
-          href={"/"}
-          className="importMsg"
-        >
+      
+    
+  
+
+        
+
           {data?.map((item) => (
-            <div style={{ textDecoration: "none", color: "black" }}>
+                <div className="message-flex">
+                  <div>{item.subject}</div>
+            <div
+            style={{ textDecoration: "none" }}
+            href={"/"}
+            className="importMsg"
+          >
+            <div key={item.id} style={{ textDecoration: "none", color: "black" }}>
               <div>
                 <div className={"subheaderread"}>{item.content}</div>
               </div>
             </div>
+            </div>
+            </div>
           ))}
         </div>
-      </div>
-    </div>
+      
+
   );
 }

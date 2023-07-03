@@ -8,16 +8,31 @@ export default function MessagePage() {
   const router = useRouter();
 
   function mydata() {
-    axios.get("data/mydata.json").then((response) => {
+    axios.get("http://localhost:3001/api/v1/messages").then((response) => {
       const sortedData = response.data.sort((a, b) => {
-        if (a.isRead && !b.isRead) return 1;
-        if (!a.isRead && b.isRead) return -1;
+        if (a.is_read && !b.is_read) return 1;
+        if (!a.is_read && b.is_read) return -1;
         return 0;
       });
       setData(sortedData);
 
       console.log(sortedData, "is it sorted");
     });
+  }
+
+  function handleSave (id) {
+
+  try{
+    axios.post("http://localhost:3001/api/v1/messages/" + id)
+  }
+  catch(err){
+
+  }
+
+    router.push({
+      pathname: "/inbox/1",
+      query: { subject: id },
+    })
   }
 
   useEffect(() => {
@@ -38,19 +53,32 @@ export default function MessagePage() {
           {data?.map((item) => (
             <div
               onClick={() =>
+
+                
+                {
+                  axios.post("http://localhost:3001/api/v1/messages/" + item._id).then(
+                    (response) => {
+                      console.log("the response is ", response)
+                    }
+                  )
+            
+              
+                  router.push({
+                    pathname: "/inbox/1",
+                    query: { subject: item._id },
+                  })
+
+                }
                 //TODO make a post to server saying it is read
                 //get the id clicked on and send it to the server
                 //then change the isRead to true
-
-                router.push({
-                  pathname: "/inbox/1",
-                  query: { subject: item.subject },
-                })
+         
+                
               }
               style={{ textDecoration: "none", color: "black" }}
             >
               <div>
-                <div className={item.isRead ? "subheaderread" : "subheader"}>
+                <div className={item.is_read ? "subheaderread" : "subheader"}>
                   {item.subject}
                 </div>
                 <TruncatedText text={item.content} />
